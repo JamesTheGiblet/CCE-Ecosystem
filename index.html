@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCE Ecosystem — Sovereign Trading Intelligence</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #333;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .ecosystem-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            color: #aaa;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card.cloud {
+            --accent: #4A9EFF;
+        }
+
+        .card.node {
+            --accent: #FF6B35;
+        }
+
+        .card.pocket {
+            --accent: #7B68EE;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .card-subtitle {
+            font-size: 0.95rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .card-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .card-features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .card-note {
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem;
+            background: #0a0a0a;
+            border-radius: 6px;
+            border-left: 2px solid var(--accent);
+        }
+
+        .card-cta {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent);
+            color: #000;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .card-cta:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            filter: brightness(1.1);
+        }
+
+        .card-price {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .ecosystem-summary {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ecosystem-summary h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .ecosystem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .ecosystem-item {
+            padding: 1rem;
+            background: #0a0a0a;
+            border-radius: 8px;
+            border: 1px solid #1a1a1a;
+        }
+
+        .ecosystem-item-title {
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .ecosystem-item-desc {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+
+            .ecosystem-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cascade Compounding Engine</h1>
+            <p class="tagline">Sovereign. Deterministic. Disciplined.</p>
+        </header>
+
+        <div class="ecosystem-intro">
+            Most trading systems are opaque, emotional, and hype-driven.<br>
+            The CCE is the opposite.<br><br>
+            Three products. One philosophy. Zero compromise.
+        </div>
+
+        <div class="cards-container">
+            <!-- CCE Cloud -->
+            <div class="card cloud">
+                <span class="card-icon">👁️</span>
+                <h3 class="card-title">CCE Cloud</h3>
+                <p class="card-subtitle">Access Anywhere. Observe Everything.</p>
+                
+                <ul class="card-features">
+                    <li>Watch the engine behave in real-time</li>
+                    <li>Understand every state transition</li>
+                    <li>Build trust before committing to Node</li>
+                </ul>
+
+                <div class="card-note">
+                    View-only. No keys. No risk. No execution.
+                </div>
+
+                <a href="#" class="card-cta">Start Observing →</a>
+                <div class="card-price">£12/month</div>
+            </div>
+
+            <!-- CCE Node -->
+            <div class="card node">
+                <span class="card-icon">⚙️</span>
+                <h3 class="card-title">CCE Node</h3>
+                <p class="card-subtitle">Sovereign Execution. Your Hardware.</p>
+                
+                <ul class="card-features">
+                    <li>Runs the full strategy locally</li>
+                    <li>Keeps your API keys private</li>
+                    <li>Autonomous 24/7 operation</li>
+                </ul>
+
+                <div class="card-note">
+                    No cloud. No custody. No third-party trust.
+                </div>
+
+                <a href="#" class="card-cta">Claim Your Node →</a>
+                <div class="card-price">£200 one-time</div>
+            </div>
+
+            <!-- CCE Pocket -->
+            <div class="card pocket">
+                <span class="card-icon">📱</span>
+                <h3 class="card-title">CCE Pocket</h3>
+                <p class="card-subtitle">Awareness. Clarity. Calm.</p>
+                
+                <ul class="card-features">
+                    <li>Instant state notifications</li>
+                    <li>Performance snapshots on demand</li>
+                    <li>Peace of mind without opening Cloud</li>
+                </ul>
+
+                <div class="card-note">
+                    Companion layer. Not a replacement.
+                </div>
+
+                <a href="#" class="card-cta">Stay Connected →</a>
+                <div class="card-price">£5/month</div>
+            </div>
+        </div>
+
+        <div class="ecosystem-summary">
+            <h2>The Ecosystem in One Line</h2>
+            <div class="ecosystem-grid">
+                <div class="ecosystem-item">
+                    <div class="ecosystem-item-title">Cloud</div>
+                    <div class="ecosystem-item-desc">Access anywhere</div>
+                </div>
+                <div class="ecosystem-item">
+                    <div class="ecosystem-item-title">Node</div>
+                    <div class="ecosystem-item-desc">Sovereign execution</div>
+                </div>
+                <div class="ecosystem-item">
+                    <div class="ecosystem-item-title">Pocket</div>
+                    <div class="ecosystem-item-desc">Mobile companion</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built by <strong>JamesTheGiblet</strong> · Giblets Creations</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem;">
+                A deterministic approach to cryptocurrency compounding.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
