@@ -70,6 +70,7 @@ Node gives you execution.
 ### 1. Connect to Your Engine
 
 Pocket syncs with:
+
 - **Cloud** subscribers (automatic sync)
 - **Node** operators (via local API)
 - **Both** (if you run Node + subscribe to Cloud)
@@ -108,6 +109,7 @@ You'll get 1-5 notifications per week on average.
 Open Pocket to see:
 
 **Current State Card**
+
 ```
 State: DORMANT
 Position: 100% USDT
@@ -116,6 +118,7 @@ Next Check: In 4h 23m
 ```
 
 **Performance Card**
+
 ```
 Starting: £10,000
 Current: £12,847
@@ -124,6 +127,7 @@ vs BTC: +14.7%
 ```
 
 **Market Card**
+
 ```
 BTC: $98,342 (-2.4%)
 Fear: 12 (Extreme Fear)
@@ -142,6 +146,7 @@ Pocket lets you customise what you hear about.
 ### State Notifications
 
 **Default: All states**
+
 - DORMANT
 - ANCHOR
 - IGNITION
@@ -151,6 +156,7 @@ Pocket lets you customise what you hear about.
 - EXTRACTION
 
 **Custom: Pick which ones**
+
 - Only major transitions (DORMANT ↔ ANCHOR)
 - Only CASCADE states (bull run alerts)
 - Only exits (SPILLWAY, EXTRACTION)
@@ -158,10 +164,12 @@ Pocket lets you customise what you hear about.
 ### Trade Notifications
 
 **Default: All trades**
+
 - Every buy
 - Every sell
 
 **Custom: Filter by size**
+
 - Only trades >£500
 - Only trades >£1,000
 - Only exits (sells)
@@ -169,20 +177,24 @@ Pocket lets you customise what you hear about.
 ### Performance Notifications
 
 **Default: Milestones**
+
 - +10%, +25%, +50%, +100%
 - -10%, -20%, -30% (drawdowns)
 
 **Custom: Daily/weekly summaries**
+
 - Daily performance email (7 AM)
 - Weekly summary (Sunday evening)
 
 ### Market Notifications
 
 **Default: Extreme events**
+
 - Fear & Greed <10 or >90
 - BTC moves >10% in 24h
 
 **Custom: Your thresholds**
+
 - Fear & Greed <20 or >80
 - BTC moves >5% in 24h
 - Custom price alerts (e.g., "BTC drops below $90k")
@@ -194,11 +206,13 @@ Pocket lets you customise what you hear about.
 ### What Pocket Stores
 
 **Cloud Mode:**
+
 - Your Cloud account token
 - Notification preferences
 - Last-viewed state
 
 **Node Mode:**
+
 - Node IP address (local network only)
 - Node API key (device-only, encrypted)
 - Notification preferences
@@ -213,16 +227,19 @@ Pocket lets you customise what you hear about.
 ### Data Sync
 
 **Cloud Mode:**
+
 - Pocket queries Cloud API every 15 minutes
 - Updates pushed when state changes
 - Uses HTTPS (encrypted in transit)
 
 **Node Mode:**
+
 - Pocket queries Node API (local network)
 - No internet connection required
 - Only works when on same WiFi as Node
 
 **Offline Mode:**
+
 - Pocket shows last known state
 - Indicates "data may be stale"
 - Resumes sync when connection restored
@@ -234,11 +251,13 @@ Pocket lets you customise what you hear about.
 ### iOS
 
 **Requirements:**
+
 - iOS 15 or later
 - iPhone 8 or newer
 - 50 MB storage
 
 **Features:**
+
 - Push notifications (via APNs)
 - Widget support (lock screen + home screen)
 - Dark mode
@@ -247,10 +266,12 @@ Pocket lets you customise what you hear about.
 ### Android
 
 **Requirements:**
+
 - Android 10 or later
 - 50 MB storage
 
 **Features:**
+
 - Push notifications (via FCM)
 - Widget support (home screen)
 - Dark mode
@@ -259,6 +280,7 @@ Pocket lets you customise what you hear about.
 ### Web (Coming Q3 2026)
 
 **Progressive Web App:**
+
 - Works in any browser
 - Install to home screen
 - Same features as native apps
@@ -293,6 +315,7 @@ Mobile companion for your sovereign engine.
 **£10/month**
 
 Additional features:
+
 - Custom notification sounds
 - Advanced filtering
 - Multi-portfolio support (if you run multiple Nodes)
@@ -374,9 +397,11 @@ You close Pocket and enjoy dinner.
 ## FAQ
 
 ### Q: Do I need Cloud or Node to use Pocket?
+
 **A:** Yes.  
 
 Pocket syncs with:
+
 - Cloud (simulated portfolio)
 - Node (real execution)
 - Both
@@ -386,11 +411,13 @@ You must have at least one active.
 ---
 
 ### Q: Can I use Pocket to control the engine?
+
 **A:** No.  
 
 Pocket is **view-only**.  
 It shows state, position, performance.  
 It does NOT let you:
+
 - Start/stop the engine
 - Override state transitions
 - Place manual trades
@@ -401,10 +428,12 @@ It does NOT let you:
 ---
 
 ### Q: Will Pocket drain my battery?
+
 **A:** No.  
 
 Pocket uses **push notifications**, not polling.  
 It only wakes when:
+
 - A notification arrives
 - You open the app
 
@@ -413,6 +442,7 @@ It only wakes when:
 ---
 
 ### Q: Can I disable notifications and just use the dashboard?
+
 **A:** Yes.  
 
 Turn off all notifications in settings.  
@@ -421,10 +451,12 @@ Use Pocket as a "quick check" app only.
 ---
 
 ### Q: What if I lose my phone?
+
 **A:** Your engine keeps running.  
 
 Pocket is just a **view** into Cloud/Node.  
 If you lose your phone:
+
 1. Your Node keeps trading (unaffected)
 2. Your Cloud account is still active
 3. Install Pocket on new phone
@@ -436,9 +468,11 @@ If you lose your phone:
 ---
 
 ### Q: Can multiple people use Pocket with the same Node?
+
 **A:** Yes.  
 
 If you share a Node with a partner/family member:
+
 1. Both install Pocket
 2. Both connect to same Node IP
 3. Both receive same notifications
@@ -448,9 +482,11 @@ If you share a Node with a partner/family member:
 ---
 
 ### Q: Do notifications work when I'm abroad?
+
 **A:** Yes, if you have internet.  
 
 Notifications are delivered via:
+
 - **Cloud mode:** Internet (WiFi or mobile data)
 - **Node mode:** Only on same network as Node (or via VPN)
 
@@ -459,9 +495,11 @@ Notifications are delivered via:
 ---
 
 ### Q: Can I snooze notifications?
+
 **A:** Not yet.  
 
 Coming in Pocket Pro (Q4 2026):
+
 - Snooze for 1 hour, 1 day, 1 week
 - "Do Not Disturb" mode
 - Scheduled quiet hours
@@ -469,6 +507,7 @@ Coming in Pocket Pro (Q4 2026):
 ---
 
 ### Q: Does Pocket work offline?
+
 **A:** Partially.  
 
 You can view the last known state.  
@@ -477,6 +516,7 @@ Notifications won't arrive until you're back online.
 ---
 
 ### Q: Can I use Pocket without Cloud if I only have Node?
+
 **A:** Yes.  
 
 Pocket connects directly to Node via local API.  
@@ -490,6 +530,7 @@ For remote access, use Cloud.
 ## Roadmap
 
 ### Phase 1 (Current)
+
 - ✅ iOS app
 - ✅ Android app
 - ✅ Push notifications
@@ -498,18 +539,21 @@ For remote access, use Cloud.
 - ✅ Node sync (local)
 
 ### Phase 2 (Q2 2026)
+
 - ⏳ Widget customisation
 - ⏳ Custom notification sounds
 - ⏳ Performance charts (simple)
 - ⏳ Weekly email summaries
 
 ### Phase 3 (Q3 2026)
+
 - ⏳ Web app (PWA)
 - ⏳ Apple Watch support
 - ⏳ Android Wear support
 - ⏳ Siri/Google Assistant integration
 
 ### Phase 4 (Q4 2026)
+
 - ⏳ Pocket Pro launch
 - ⏳ Multi-portfolio support
 - ⏳ Advanced filtering
@@ -526,12 +570,14 @@ For remote access, use Cloud.
 **Response time:** <48 hours (weekdays)
 
 **Covered issues:**
+
 - App crashes
 - Notification problems
 - Sync errors
 - Account issues
 
 **NOT covered:**
+
 - "Why didn't the engine buy?" (strategy questions → Cloud/Node support)
 - Device/OS issues
 - Network problems
@@ -550,6 +596,7 @@ Share screenshots, discuss notification preferences, learn from other users.
 CCE Pocket exists because **awareness ≠ obsession**.
 
 In a world where:
+
 - Apps are designed for addiction
 - Notifications create anxiety
 - Constant checking becomes compulsion
@@ -561,6 +608,7 @@ It gives you just enough information to feel connected.
 Not so much that you become obsessed.
 
 Pocket says:
+
 - "The engine is working"
 - "Nothing requires your attention"
 - "You can go live your life"
@@ -574,14 +622,17 @@ Pocket says:
 ## The CCE Ecosystem
 
 ### Cloud
+
 Access anywhere. Observe everything.  
 **£12/month**
 
 ### Node
+
 Sovereign execution. Your hardware.  
 **£200 one-time**
 
 ### Pocket (you are here)
+
 Awareness. Clarity. Calm.  
 **£5/month**
 
@@ -604,12 +655,14 @@ Awareness. Clarity. Calm.
 ### Data Collection
 
 **What we collect:**
+
 - Account email (authentication)
 - Device token (push notifications)
 - Notification preferences
 - App usage analytics (anonymised)
 
 **What we DON'T collect:**
+
 - Location data
 - Contacts
 - Photos
@@ -619,10 +672,12 @@ Awareness. Clarity. Calm.
 ### Data Sharing
 
 **We share data with:**
+
 - Cloud API (for sync)
 - Apple/Google (for push notifications)
 
 **We DON'T share with:**
+
 - Advertisers
 - Data brokers
 - Third-party analytics
@@ -637,6 +692,7 @@ Awareness. Clarity. Calm.
 ### Your Rights
 
 You can:
+
 - Export your data (JSON)
 - Delete your account
 - Opt out of analytics
@@ -652,6 +708,7 @@ CCE Pocket is proprietary software.
 © 2026 Giblets Creations. All rights reserved.
 
 Available on:
+
 - Apple App Store
 - Google Play Store
 
@@ -661,7 +718,7 @@ Available on:
 
 ## Credits
 
-**Built by:** James Wescott (JamesTheGiblet)  
+**Built by:** James Gilbert (JamesTheGiblet)  
 **Company:** Giblets Creations  
 **Philosophy:** Sovereign. Deterministic. Disciplined.
 
@@ -672,161 +729,3 @@ Available on:
 **Pocket is presence.**
 
 Welcome to awareness without obsession.
-```
-
----
-
-## What This README Delivers
-
-### Structure
-1. **Value proposition** — Awareness without obsession
-2. **Features** — What it does (notifications, dashboard, peace of mind)
-3. **Boundaries** — What it doesn't do (not a controller)
-4. **Philosophy** — Emotional layer of ecosystem
-5. **How it works** — 30-second setup, notification types
-6. **Notification settings** — Full customisation
-7. **Privacy** — What's stored, what's not
-8. **Platform support** — iOS, Android, Web (coming)
-9. **Pricing** — £5/month + Pocket Pro preview
-10. **Use cases** — Three realistic scenarios
-11. **FAQ** — Every practical question
-12. **Roadmap** — Wearables, PWA, Pro features
-13. **Support** — Email + community
-14. **Philosophy** — Awareness ≠ obsession manifesto
-15. **Privacy policy** — GDPR/CCPA compliance
-
-### Tone Shift from Node/Cloud
-
-**Cloud** = Analytical ("observe the logic")  
-**Node** = Technical ("sovereign execution")  
-**Pocket** = Emotional ("peace of mind")
-
-Pocket's README speaks to **feelings**:
-- "Peace of mind"
-- "Awareness without anxiety"
-- "Trust without obsession"
-- "Calm between checks"
-
-This is intentional. Pocket is the emotional layer.
-
-### Trust-Building Elements
-- Battery impact: <1% per day (addresses common app concern)
-- No location tracking (privacy-first)
-- View-only (can't accidentally mess up execution)
-- Works offline (shows last known state)
-- 14-day free trial (low-friction entry)
-
-### Objection Handling (FAQ)
-- "Do I need Cloud/Node?" → Yes (clarifies dependency)
-- "Will it drain battery?" → No (<1%)
-- "Can I control engine?" → No (view-only)
-- "What if I lose phone?" → Engine keeps running
-- "Does it work offline?" → Partially (last known state)
-
-### Conversion Optimisation
-- Free 14-day trial (no credit card)
-- £5/month (impulse price point)
-- Pocket Pro preview (upsell path)
-- Bundle with Cloud (£12+£5 = £17/month total ecosystem)
-
----
-
-## App Store Descriptions
-
-Since you'll need these for submission:
-
-### iOS App Store (Short Description)
-```
-CCE Pocket: Stay connected to your Cascade Compounding Engine. 
-Instant state notifications. Quick performance snapshots. 
-Peace of mind without obsession.
-```
-
-### iOS App Store (Full Description)
-```
-CCE Pocket is the mobile companion to the Cascade Compounding Engine.
-
-Get instant notifications when your engine transitions states.
-Glance at performance without opening your laptop.
-Stay aware without becoming obsessed.
-
-FEATURES:
-• Push notifications for state changes
-• Quick-view dashboard (state, position, performance)
-• Market context (BTC price, Fear & Greed)
-• Home screen widgets
-• Dark mode
-• Biometric unlock
-
-REQUIRES:
-• CCE Cloud subscription ($12/mo) OR
-• CCE Node device ($200 one-time)
-
-Pocket is view-only. It shows you what the engine is doing.
-It does not execute trades or control the engine.
-
-Awareness. Clarity. Calm.
-```
-
-### Google Play Store (Short Description)
-```
-CCE Pocket: Mobile companion for the Cascade Compounding Engine. 
-State notifications. Performance snapshots. Peace of mind.
-```
-
-### Google Play Store (Full Description)
-```
-[Same as iOS, adjusted for Android features]
-```
-
----
-
-## Screenshots to Prepare
-
-1. **Current State Screen** (showing DORMANT with 100% USDT)
-2. **Performance Screen** (showing +28.5% return)
-3. **Market Context Screen** (BTC price + Fear & Greed)
-4. **Notification Example** (state transition alert)
-5. **Widget Examples** (lock screen + home screen)
-6. **Settings Screen** (notification customisation)
-
----
-
-## Deployment Checklist
-
-- [ ] Build iOS app (Swift/SwiftUI)
-- [ ] Build Android app (Kotlin/Jetpack Compose)
-- [ ] Set up push notification infrastructure (FCM + APNs)
-- [ ] Create App Store listing (descriptions, screenshots)
-- [ ] Create Google Play listing
-- [ ] Build subscription flow (RevenueCat or similar)
-- [ ] Set up `pocket.cce.gibletscreations.com` landing page
-- [ ] Create Discord channel (#pocket-users)
-- [ ] Write email onboarding sequence (days 1, 3, 7, 14)
-
----
-
-## Bundle Pricing Strategy
-
-Consider offering **ecosystem bundles**:
-
-### Cloud + Pocket Bundle
-**£15/month** (save £2)
-- Full Cloud dashboard
-- Mobile notifications
-- Best for non-Node users
-
-### Node + Pocket Bundle
-**£200 + £5/month**
-- Sovereign execution
-- Mobile awareness
-- Best for serious users
-
-### Complete Ecosystem
-**Cloud (£12) + Node (£200) + Pocket (£5)**
-- Total entry: £217 + £17/month
-- For users who want everything
-
----
-
-**This is production-ready.**

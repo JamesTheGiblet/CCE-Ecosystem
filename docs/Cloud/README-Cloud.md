@@ -1,5 +1,5 @@
  CCE Cloud
- 
+
  **Access Anywhere. Observe Everything. Zero Risk.**
 
 CCE Cloud is the web-based cockpit for the Cascade Compounding Engine.  
@@ -70,26 +70,33 @@ It lets you:
 ## How It Works
 
 ### 1. Sign Up
+
 Create an account at `cloud.cce.gibletscreations.com`
 
 ### 2. Choose Your Starting Capital
+
 Select a simulated portfolio size:
+
 - £1,000
 - £5,000
 - £10,000
 - Custom amount
 
 ### 3. Watch the Engine
+
 The CCE runs in real-time using live market data.  
 Your dashboard updates automatically as:
+
 - Market conditions change
 - States transition
 - Positions open/close
 - Performance compounds
 
 ### 4. Review History
+
 Replay any period from 2013 onwards.  
 See how CCE would have behaved during:
+
 - 2017 bull run
 - 2018 bear market
 - 2020 COVID crash
@@ -102,6 +109,7 @@ See how CCE would have behaved during:
 ## Dashboard Overview
 
 ### Current State Card
+
 ```
 State: DORMANT
 Reason: BTC Fear & Greed = 12 (Extreme Fear)
@@ -110,6 +118,7 @@ Next Check: 2026-02-10 06:00 UTC
 ```
 
 ### Performance Card
+
 ```
 Starting Capital: £10,000
 Current Value: £12,847
@@ -119,6 +128,7 @@ Duration: 247 days
 ```
 
 ### Market Context Card
+
 ```
 BTC Price: $98,342
 24h Change: -2.4%
@@ -127,7 +137,9 @@ Trend: Bearish
 ```
 
 ### State Timeline
+
 Visual graph showing:
+
 - When each state was active
 - Duration in each state
 - Performance during each state
@@ -138,18 +150,21 @@ Visual graph showing:
 ## Technology
 
 ### Frontend
+
 - **React** — Fast, responsive UI
 - **TailwindCSS** — Clean, minimal design
 - **Recharts** — Performance visualisation
 - **Real-time WebSocket** — Live state updates
 
 ### Backend
+
 - **FastAPI** — High-performance Python API
 - **PostgreSQL** — Historical data storage
 - **Redis** — Real-time caching
 - **Binance API** — Live market data
 
 ### Infrastructure
+
 - **Cloudflare** — Global CDN
 - **Vercel** — Frontend hosting
 - **Railway** — Backend hosting
@@ -160,18 +175,21 @@ Visual graph showing:
 ## Security & Privacy
 
 ### What We Store
+
 - Email address (for authentication)
 - Simulated portfolio settings
 - Dashboard preferences
 - Usage analytics (anonymised)
 
 ### What We DON'T Store
+
 - API keys
 - Real portfolio data
 - Trading history
 - Personal financial information
 
 ### Authentication
+
 - Email + password (bcrypt hashed)
 - Optional 2FA (TOTP)
 - Session tokens (httpOnly cookies)
@@ -187,6 +205,7 @@ Visual graph showing:
 A premium dashboard for a sovereign engine.
 
 ### What You Get
+
 - Unlimited access
 - All historical data
 - Real-time updates
@@ -195,6 +214,7 @@ A premium dashboard for a sovereign engine.
 - Email support
 
 ### What You DON'T Get
+
 - Trade execution (that's Node)
 - Mobile notifications (that's Pocket)
 - API access (coming later)
@@ -204,6 +224,7 @@ A premium dashboard for a sovereign engine.
 ## FAQ
 
 ### Q: Is this a paper trading simulator?
+
 **A:** Yes and no.  
 
 It's not a "practice trading" tool.  
@@ -214,6 +235,7 @@ The engine uses the same logic as Node, but doesn't execute trades.
 ---
 
 ### Q: Can I use Cloud to test my own strategies?
+
 **A:** No.  
 
 Cloud runs the CCE strategy only.  
@@ -222,10 +244,12 @@ It's designed to build trust in the CCE philosophy, not as a generic backtesting
 ---
 
 ### Q: Does Cloud guarantee Node will perform the same way?
+
 **A:** No.  
 
 Cloud shows how the engine **behaves**.  
 Node executes the same logic, but:
+
 - Exchange fees differ
 - Slippage varies
 - Network conditions change
@@ -236,6 +260,7 @@ Cloud is transparency, not a performance promise.
 ---
 
 ### Q: Can I cancel anytime?
+
 **A:** Yes.  
 
 Monthly subscription. No contract. Cancel anytime.  
@@ -244,6 +269,7 @@ Data remains accessible for 30 days after cancellation.
 ---
 
 ### Q: What if I want to switch to Node later?
+
 **A:** Perfect.  
 
 That's the whole point of Cloud.  
@@ -254,6 +280,7 @@ Cloud subscribers get **£20 off Node** (one-time discount code).
 ---
 
 ### Q: Do you offer refunds?
+
 **A:** First month only.  
 
 If you're not satisfied within 30 days, email `support@gibletscreations.com` for a full refund.  
@@ -264,18 +291,21 @@ No questions asked.
 ## Roadmap
 
 ### Phase 1 (Current)
+
 - ✅ Live state tracking
 - ✅ Historical playback
 - ✅ Performance comparison
 - ✅ Market context
 
 ### Phase 2 (Q2 2026)
+
 - ⏳ Custom date range analysis
 - ⏳ Portfolio comparison (multiple starting capitals)
 - ⏳ Export data (CSV, JSON)
 - ⏳ State transition annotations
 
 ### Phase 3 (Q3 2026)
+
 - ⏳ API access for developers
 - ⏳ Webhook notifications
 - ⏳ Multi-currency support (ETH, SOL)
@@ -286,13 +316,16 @@ No questions asked.
 ## Support
 
 ### Documentation
+
 Full docs at `docs.cce.gibletscreations.com`
 
 ### Email
-`support@gibletscreations.com`  
+
+`cloud-support@gibletscreations.com`  
 Response time: <24 hours (weekdays)
 
 ### Community
+
 Join the CCE Discord: `discord.gg/cce`  
 (Invite-only for Cloud/Node/Pocket subscribers)
 
@@ -303,6 +336,7 @@ Join the CCE Discord: `discord.gg/cce`
 CCE Cloud exists because **transparency builds trust**.
 
 In a space full of:
+
 - Fake screenshots
 - Survivorship bias
 - Backtested lies
@@ -323,14 +357,17 @@ Just deterministic logic, observable behaviour, and verifiable results.
 ## The CCE Ecosystem
 
 ### Cloud (you are here)
+
 Access anywhere. Observe everything.  
 **£12/month**
 
 ### Node
+
 Sovereign execution. Your hardware.  
 **£200 one-time**
 
 ### Pocket
+
 Awareness. Clarity. Calm.  
 **£5/month**
 
@@ -356,7 +393,7 @@ Unauthorised reproduction or reverse-engineering is prohibited.
 
 ## Credits
 
-**Built by:** James Wescott (JamesTheGiblet)  
+**Built by:** James Gilbert (JamesTheGiblet)  
 **Company:** Giblets Creations  
 **Philosophy:** Sovereign. Deterministic. Disciplined.
 

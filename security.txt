@@ -1,0 +1,5 @@
+Contact: mailto:security@gibletscreations.com
+Expires: 2027-02-09T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://cce.gibletscreations.com/legal.html
+Canonical: https://cce.gibletscreations.com/security.txt

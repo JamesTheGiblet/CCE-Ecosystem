@@ -11,6 +11,7 @@ The Cascade Compounding Engine is a **rules-based cryptocurrency trading system*
 CCE runs a seven-state machine that moves capital between BTC and USDT based on strict, deterministic conditions — no hunches, no hype, no hope.
 
 **Historical Performance (2013-2024 backtest):**
+
 - Total Return: +18,639%
 - Alpha vs BTC Buy-and-Hold: +3,320%
 - Max Drawdown: -34%
@@ -23,6 +24,7 @@ CCE runs a seven-state machine that moves capital between BTC and USDT based on 
 ## The Philosophy
 
 Most trading systems are:
+
 - **Opaque** — You don't know why they trade
 - **Emotional** — They react to fear and greed
 - **Unpredictable** — You can't trust the behaviour
@@ -75,6 +77,7 @@ Bear trend confirmed, return to safety.
 ### Decision Inputs
 
 CCE evaluates:
+
 - BTC price and trend direction
 - Fear & Greed Index (market sentiment)
 - Moving averages and momentum
@@ -84,7 +87,7 @@ CCE evaluates:
 **Checks occur every 6 hours.**  
 **Trades execute only when state transitions trigger.**
 
-### No Leverage. No Prediction.
+### No Leverage. No Prediction
 
 CCE is built for **long-term compounding through discipline**, not short-term speculation.
 
@@ -100,11 +103,13 @@ CCE is built for **long-term compounding through discipline**, not short-term sp
 CCE is available through three products:
 
 ### 👁️ CCE Cloud
+
 **Access Anywhere. Observe Everything.**
 
 Web-based dashboard that shows the engine in action using simulated capital.
 
 **Features:**
+
 - Live engine state and transitions
 - Historical playback (2013-present)
 - Performance tracking vs BTC
@@ -112,6 +117,7 @@ Web-based dashboard that shows the engine in action using simulated capital.
 - Complete transparency, zero risk
 
 **What it's NOT:**
+
 - Not live trading
 - Not storing your API keys
 - Not making promises about returns
@@ -122,11 +128,13 @@ Web-based dashboard that shows the engine in action using simulated capital.
 ---
 
 ### ⚙️ CCE Node
+
 **Sovereign Execution. Your Hardware.**
 
 Dedicated Raspberry Pi device that runs CCE locally and autonomously.
 
 **Features:**
+
 - Executes real trades on Binance
 - Runs 24/7 on your network
 - Keeps API keys private (never leave device)
@@ -134,6 +142,7 @@ Dedicated Raspberry Pi device that runs CCE locally and autonomously.
 - Free software updates forever
 
 **What it's NOT:**
+
 - Not dependent on our servers
 - Not storing your data
 - Not requiring trust in third parties
@@ -144,17 +153,20 @@ Dedicated Raspberry Pi device that runs CCE locally and autonomously.
 ---
 
 ### 📱 CCE Pocket
+
 **Awareness. Clarity. Calm.**
 
 Mobile companion app for iOS and Android.
 
 **Features:**
+
 - Instant state change notifications
 - Quick performance snapshots
 - Market context at a glance
 - Peace of mind without obsession
 
 **What it's NOT:**
+
 - Not a control interface
 - Not replacing Cloud or Node
 - Not encouraging constant checking
@@ -242,18 +254,21 @@ Stay connected on mobile without constant checking.
 ## Technology
 
 ### Cloud
+
 - **Frontend:** React, TailwindCSS, Recharts
 - **Backend:** FastAPI (Python), PostgreSQL, Redis
 - **Infrastructure:** Cloudflare, Vercel, Railway
 - **Target Uptime:** 99.9%
 
 ### Node
+
 - **Hardware:** Raspberry Pi 5 (8GB), 128GB NVMe SSD
 - **Software:** Python 3.11, SQLite, CCXT
 - **OS:** Debian 12 (64-bit)
 - **Power:** 8-12W average, ~£15-20/year electricity
 
 ### Pocket
+
 - **Platforms:** iOS 15+, Android 10+
 - **Stack:** Swift/SwiftUI (iOS), Kotlin/Jetpack Compose (Android)
 - **Notifications:** APNs, FCM
@@ -264,16 +279,19 @@ Stay connected on mobile without constant checking.
 ## Support
 
 ### Documentation
+
 Full docs at [docs.cce.gibletscreations.com](https://docs.cce.gibletscreations.com)
 
 ### Email Support
-- **Cloud:** cloud-support@gibletscreations.com
-- **Node:** node-support@gibletscreations.com
-- **Pocket:** pocket-support@gibletscreations.com
+
+- **Cloud:** <cloud-support@gibletscreations.com>
+- **Node:** <node-support@gibletscreations.com>
+- **Pocket:** <pocket-support@gibletscreations.com>
 
 Response time: <48 hours (weekdays)
 
 ### Community
+
 **Discord:** [discord.gg/cce](https://discord.gg/cce)  
 *Invite-only for Cloud/Node/Pocket subscribers*
 
@@ -282,18 +300,21 @@ Response time: <48 hours (weekdays)
 ## Roadmap
 
 ### Q2 2026
+
 - Custom date range analysis (Cloud)
 - Coinbase Pro support (Node)
 - Email notifications (Pocket)
 - Performance export (all products)
 
 ### Q3 2026
+
 - API access for developers
 - Apple Watch / Android Wear support
 - Web app (PWA) for Pocket
 - Multi-exchange portfolio (Node)
 
 ### Q4 2026
+
 - Pocket Pro (advanced features)
 - Team accounts (Cloud)
 - Multi-currency support (ETH, SOL)
@@ -304,27 +325,32 @@ Response time: <48 hours (weekdays)
 ## Frequently Asked Questions
 
 ### Is CCE a bot?
+
 **No.** CCE is a state machine, not a trading bot.
 
 Bots react constantly.  
 CCE operates in discrete states with strict transition rules.
 
 ### How often does CCE trade?
+
 **Rarely.** Averages 8-12 trades per market cycle (6-18 months).
 
 CCE is built for discipline, not activity.
 
 ### Can I modify the strategy?
+
 **No.** The strategy is proprietary and fixed.
 
 CCE runs one methodology: the seven-state Cascade Compounding Engine.
 
 ### What exchanges does CCE support?
+
 **Currently: Binance only.**
 
 Roadmap: Coinbase Pro (Q3 2026), Kraken (Q4 2026), others in 2027.
 
 ### Do you guarantee returns?
+
 **Absolutely not.**
 
 Past performance ≠ future results.  
@@ -333,6 +359,7 @@ Markets change. Technology fails. Exchanges collapse.
 CCE is a **discipline system**, not a crystal ball.
 
 ### Can I get a refund?
+
 **Yes.**
 
 - **Cloud:** 30-day money-back (first month only)
@@ -340,6 +367,7 @@ CCE is a **discipline system**, not a crystal ball.
 - **Pocket:** 14-day free trial
 
 ### Is my data private?
+
 **Yes.**
 
 - API keys never leave Node (stored encrypted locally)
@@ -350,6 +378,7 @@ CCE is a **discipline system**, not a crystal ball.
 See full Privacy Policy at [privacy.cce.gibletscreations.com](https://privacy.cce.gibletscreations.com)
 
 ### What if CCE loses money?
+
 **You bear the loss.**
 
 Trading involves risk. You may lose money.  
@@ -368,8 +397,9 @@ We are not liable for financial losses.
 | **Pocket** | £5/month | Mobile app, notifications, quick-view dashboard |
 
 **Bundle Discounts:**
+
 - Cloud subscribers: £20 off Node
-- Complete ecosystem: Cloud + Node + Pocket = £217 upfront + £17/month
+- **Complete Ecosystem:** Cloud + Node + Pocket = **£197 upfront** + £17/month (includes Node discount)
 
 ---
 
@@ -379,11 +409,13 @@ CCE software is proprietary.
 © 2026 Giblets Creations. All rights reserved.
 
 **You may:**
+
 - Use CCE for personal trading
 - Monitor and analyse performance
 - Share general observations
 
 **You may NOT:**
+
 - Reverse-engineer the strategy
 - Resell or sublicense the software
 - Extract or copy proprietary algorithms
@@ -440,7 +472,7 @@ Each product has its own detailed README in its respective directory.
 
 ---
 
-**Questions?** → support@gibletscreations.com  
+**Questions?** → <support@gibletscreations.com>  
 **Issues?** → github.com/gibletscreations/cce/issues  
 **Community?** → discord.gg/cce
 

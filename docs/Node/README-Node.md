@@ -44,6 +44,7 @@ Cloud shows you the logic.
 Node is the heart of the ecosystem — the part that actually compounds.
 
 In a world where:
+
 - Exchanges get hacked
 - Platforms freeze withdrawals
 - Algorithms change without warning
@@ -76,6 +77,7 @@ Your sovereignty.
 CCE Node ships as a complete, ready-to-run system:
 
 **Hardware:**
+
 - Raspberry Pi 5 (8GB RAM)
 - 128GB NVMe SSD (Kingston)
 - Official Pi 5 Active Cooler
@@ -84,6 +86,7 @@ CCE Node ships as a complete, ready-to-run system:
 - Pre-installed and configured OS
 
 **Software:**
+
 - Debian 12 (Bookworm) 64-bit
 - Python 3.11
 - CCE Engine (production build)
@@ -92,11 +95,13 @@ CCE Node ships as a complete, ready-to-run system:
 - Log rotation and management
 
 **Network:**
+
 - Ethernet port (1 Gbps)
 - WiFi 6 (802.11ax)
 - Bluetooth 5.0
 
 **Power:**
+
 - 5V 5A via USB-C
 - Average draw: 8-12W
 - Peak draw: 20W (during trades)
@@ -173,12 +178,14 @@ No emotion. No prediction. Pure logic.
 ### Check Schedule
 
 Node checks market conditions every **6 hours**:
+
 - 00:00 UTC
 - 06:00 UTC
 - 12:00 UTC
 - 18:00 UTC
 
 At each check:
+
 1. Fetch current BTC price
 2. Fetch Fear & Greed Index
 3. Calculate trend indicators
@@ -236,6 +243,7 @@ Logs rotate daily and are kept for 90 days.
 Node is designed for **long-term compounding**, not short-term gains.
 
 **Realistic Annual Returns:**
+
 - Bear market: -10% to +20%
 - Sideways market: +15% to +40%
 - Bull market: +50% to +200%
@@ -252,6 +260,7 @@ The CCE is a **discipline system**, not a crystal ball.
 Node is designed to run autonomously.
 
 **You do not need to:**
+
 - Update software (auto-updates weekly)
 - Monitor the dashboard (optional)
 - Restart the device (self-healing)
@@ -260,6 +269,7 @@ Node is designed to run autonomously.
 ### Recommended: Quarterly Check
 
 Every 3 months:
+
 1. Log into dashboard
 2. Review performance
 3. Verify logs are healthy
@@ -271,6 +281,7 @@ Every 3 months:
 ### Optional: Daily Monitoring
 
 If you want to watch the engine:
+
 - Access dashboard at `http://cce-node.local`
 - View current state
 - See recent trades
@@ -305,6 +316,7 @@ Node runs a minimal attack surface:
 ### Physical Security
 
 **Your responsibility:**
+
 - Keep Node on your private network
 - Don't expose to public WiFi
 - Consider VPN for remote access
@@ -331,6 +343,7 @@ You can disable auto-updates in settings.
 **Hardware + Software. One price. Forever yours.**
 
 ### What's Included
+
 - Complete hardware system
 - Lifetime software license
 - Free updates forever
@@ -338,6 +351,7 @@ You can disable auto-updates in settings.
 - Access to Node Discord channel
 
 ### What's NOT Included
+
 - Binance trading fees (~0.1% per trade)
 - Electricity costs (~£15-20/year)
 - Network/internet connection
@@ -373,12 +387,14 @@ Node pays for itself **fast** if the engine performs.
 **Response time:** <48 hours (weekdays)
 
 **Covered issues:**
+
 - Hardware failures
 - Software bugs
 - Setup assistance
 - Configuration questions
 
 **NOT covered:**
+
 - Trading strategy questions ("Why didn't it buy?")
 - Exchange account issues
 - Network/internet problems
@@ -403,6 +419,7 @@ Ask questions, share results, learn from other Node operators.
 ## FAQ
 
 ### Q: Do I need to leave Node running 24/7?
+
 **A:** Yes.  
 
 Node checks market conditions every 6 hours.  
@@ -414,9 +431,11 @@ Annual electricity cost: £15-20.
 ---
 
 ### Q: What if my internet goes down?
+
 **A:** Node will resume when connection is restored.  
 
 The engine is designed to handle network interruptions:
+
 - Missed checks are logged
 - Next check proceeds normally
 - State transitions still occur based on next available data
@@ -426,6 +445,7 @@ The engine is designed to handle network interruptions:
 ---
 
 ### Q: Can I run multiple Nodes?
+
 **A:** Yes, but why?  
 
 Each Node is designed for one portfolio.  
@@ -436,9 +456,11 @@ If you want to run multiple strategies or test different parameters, you'd need 
 ---
 
 ### Q: What if Node breaks?
+
 **A:** Hardware warranty: 1 year (replace/repair).  
 
 If hardware fails:
+
 1. Email `node-support@gibletscreations.com`
 2. We send replacement Node
 3. You transfer SD card to new device
@@ -449,6 +471,7 @@ If hardware fails:
 ---
 
 ### Q: Can I modify the strategy?
+
 **A:** No.  
 
 Node runs the CCE strategy only.  
@@ -460,14 +483,17 @@ Node is a **sovereign execution device** for the CCE philosophy.
 ---
 
 ### Q: What exchanges does Node support?
+
 **A:** Binance only (for now).  
 
 **Roadmap:**
+
 - Q3 2026: Coinbase Pro
 - Q4 2026: Kraken
 - 2027: OKX, Bybit
 
 Binance was chosen because:
+
 - Highest liquidity (lowest slippage)
 - Reliable API
 - Global availability
@@ -476,6 +502,7 @@ Binance was chosen because:
 ---
 
 ### Q: Can I use Node in [my country]?
+
 **A:** If Binance operates there, yes.  
 
 Node itself is hardware — no geographic restrictions.  
@@ -486,9 +513,11 @@ Check Binance's list of supported countries.
 ---
 
 ### Q: What if Binance shuts down?
+
 **A:** Node includes emergency shutdown.  
 
 If Binance API becomes unavailable:
+
 1. Node detects connection failure
 2. Attempts graceful exit (sell all BTC → USDT)
 3. Enters HALT state
@@ -500,9 +529,11 @@ If Binance API becomes unavailable:
 ---
 
 ### Q: Do you offer refunds?
+
 **A:** 30-day money-back guarantee.  
 
 If Node doesn't meet expectations:
+
 1. Email `node-support@gibletscreations.com` within 30 days
 2. Return Node in original condition
 3. Receive full refund (minus return shipping)
@@ -512,6 +543,7 @@ If Node doesn't meet expectations:
 ---
 
 ### Q: Can I upgrade Node later?
+
 **A:** Hardware: no. Software: yes.  
 
 The Pi 5 is powerful enough for CCE.  
@@ -522,9 +554,11 @@ Upgrades aren't necessary.
 ---
 
 ### Q: How is Node different from running CCE myself?
+
 **A:** Node is **plug-and-forget**.  
 
 You could:
+
 - Buy a Pi yourself (£80)
 - Install Linux (30 min)
 - Configure network (15 min)
@@ -543,6 +577,7 @@ Node is for people who value their time.
 ## Roadmap
 
 ### Phase 1 (Current)
+
 - ✅ Raspberry Pi 5 hardware
 - ✅ Binance integration
 - ✅ Seven-state machine
@@ -550,18 +585,21 @@ Node is for people who value their time.
 - ✅ Local web dashboard
 
 ### Phase 2 (Q2 2026)
+
 - ⏳ Coinbase Pro support
 - ⏳ Email notifications
 - ⏳ SMS alerts (Twilio integration)
 - ⏳ Performance export (CSV)
 
 ### Phase 3 (Q3 2026)
+
 - ⏳ Multi-exchange portfolio (split capital)
 - ⏳ Advanced dashboard (Cloud integration)
 - ⏳ Remote access via VPN
 - ⏳ Mobile app integration (Pocket)
 
 ### Phase 4 (2027)
+
 - ⏳ Multi-currency support (ETH, SOL)
 - ⏳ Cluster mode (multiple Nodes, one dashboard)
 - ⏳ API access for developers
@@ -574,18 +612,21 @@ Node is for people who value their time.
 ### Software Stack
 
 **Core Engine:**
+
 - Python 3.11
 - SQLite (state/logs)
 - CCXT (exchange abstraction)
 - APScheduler (cron)
 
 **Web Dashboard:**
+
 - Flask (backend)
 - Jinja2 (templates)
 - TailwindCSS (styling)
 - Chart.js (performance graphs)
 
 **System:**
+
 - Systemd (service management)
 - Logrotate (log management)
 - UFW (firewall)
@@ -616,16 +657,19 @@ Node is for people who value their time.
 ### Resource Usage
 
 **Idle:**
+
 - CPU: 2-5%
 - RAM: 180-220 MB
 - Disk I/O: <1 MB/hour
 
 **During Check:**
+
 - CPU: 15-25%
 - RAM: 250-300 MB
 - Network: 2-5 KB
 
 **During Trade:**
+
 - CPU: 30-40%
 - RAM: 300-350 MB
 - Network: 10-20 KB
@@ -639,11 +683,13 @@ Node is for people who value their time.
 **1 year** from date of purchase.
 
 Covers:
+
 - Manufacturing defects
 - Component failures
 - Power supply issues
 
 Does NOT cover:
+
 - Physical damage (drops, water, etc.)
 - User modifications
 - Lightning/power surge damage
@@ -653,6 +699,7 @@ Does NOT cover:
 **Lifetime** updates and bug fixes.
 
 If a bug causes financial loss:
+
 - We fix the bug immediately
 - We investigate the incident
 - We document the failure mode
@@ -663,6 +710,7 @@ If a bug causes financial loss:
 **30 days** from delivery.
 
 Process:
+
 1. Email request
 2. Receive RMA number
 3. Return Node (original packaging preferred)
@@ -687,6 +735,7 @@ Cryptocurrency trading involves substantial risk of loss.
 - Technology can break
 
 **You are responsible for:**
+
 - Understanding the risks
 - Securing your API keys
 - Monitoring your portfolio
@@ -696,6 +745,7 @@ Cryptocurrency trading involves substantial risk of loss.
 ### No Guarantees
 
 We make **zero promises** about:
+
 - Future returns
 - Uptime (99% target, not guaranteed)
 - Exchange availability
@@ -708,10 +758,12 @@ We make **zero promises** about:
 The CCE strategy, state machine logic, and software are **proprietary**.
 
 You may:
+
 - Use Node for personal trading
 - Monitor and analyse its behaviour
 
 You may NOT:
+
 - Reverse-engineer the software
 - Extract or copy the strategy
 - Resell or redistribute Node
@@ -726,6 +778,7 @@ You may NOT:
 CCE Node exists because **execution should be sovereign**.
 
 In a world where:
+
 - Platforms control your access
 - Algorithms change without notice
 - Terms of service trap users
@@ -746,14 +799,17 @@ Cloud shows you the engine.
 ## The CCE Ecosystem
 
 ### Cloud
+
 Access anywhere. Observe everything.  
 **£12/month**
 
 ### Node (you are here)
+
 Sovereign execution. Your hardware.  
 **£200 one-time**
 
 ### Pocket
+
 Awareness. Clarity. Calm.  
 **£5/month**
 
@@ -781,7 +837,7 @@ Software is licensed (lifetime, non-transferable).
 
 ## Credits
 
-**Built by:** James Wescott (JamesTheGiblet)  
+**Built by:** James Gilbert (JamesTheGiblet)  
 **Company:** Giblets Creations  
 **Philosophy:** Sovereign. Deterministic. Disciplined.
 

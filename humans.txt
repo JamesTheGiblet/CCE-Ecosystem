@@ -1,0 +1,16 @@
+/* TEAM */
+  Name: James Gilbert (JamesTheGiblet)
+  Role: Founder & Developer
+  Site: https://cce.gibletscreations.com
+  Location: United Kingdom
+
+/* AI COLLABORATORS */
+  Name: Gemini Code Assist
+  Role: Coding Assistant & Co-Pilot
+
+  Name: Claude.ai
+  Role: Strategy & Content Assistant
+
+/* SITE */
+  Last update: 2026/02/09
+  Standards: HTML5, CSS3, PWA

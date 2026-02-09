@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCE Ecosystem — Sovereign Trading Intelligence</title>
+    <meta name="description" content="Cascade Compounding Engine - Deterministic Bitcoin trading through discipline. Sovereign execution on your hardware.">
+    <meta property="og:title" content="CCE Ecosystem">
+    <meta property="og:description" content="Sovereign. Deterministic. Disciplined.">
+    <meta property="og:type" content="website">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <link type="text/plain" rel="author" href="humans.txt">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        :root { --accent-cloud: #4A9EFF; --accent-node: #FF6B35; --accent-pocket: #7B68EE; }
 
         body {
             font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
@@ -29,6 +38,12 @@
             margin-bottom: 4rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #333;
+        }
+
+        nav {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: #666;
         }
 
         h1 {
@@ -53,6 +68,74 @@
             font-size: 1rem;
             line-height: 1.8;
         }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin: 4rem 0 2rem;
+            color: #fff;
+        }
+
+        /* Philosophy Grid */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+            background: #111;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #222;
+        }
+        .philosophy-col h3 { color: #fff; margin-bottom: 1rem; border-bottom: 1px solid #333; padding-bottom: 0.5rem; }
+        .philosophy-col ul { list-style: none; }
+        .philosophy-col li { margin-bottom: 0.5rem; color: #888; }
+        .philosophy-col.bad li::before { content: '✗ '; color: #ff4444; }
+        .philosophy-col.good li::before { content: '✓ '; color: #00cc66; }
+
+        /* State Machine */
+        .state-machine {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+        .state-step {
+            flex: 1;
+            min-width: 120px;
+            background: #111;
+            padding: 1rem;
+            border: 1px solid #222;
+            border-radius: 8px;
+            position: relative;
+        }
+        .state-step::after {
+            content: '→';
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+            font-size: 1.2rem;
+        }
+        .state-step:last-child::after { display: none; }
+        .state-name { font-weight: bold; color: #fff; font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .state-desc { font-size: 0.75rem; color: #666; }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #222;
+            padding-bottom: 1.5rem;
+        }
+        .faq-q { color: #fff; font-weight: bold; margin-bottom: 0.5rem; }
+        .faq-a { color: #aaa; font-size: 0.95rem; }
 
         .cards-container {
             display: grid;
@@ -94,15 +177,15 @@
         }
 
         .card.cloud {
-            --accent: #4A9EFF;
+            --accent: var(--accent-cloud);
         }
 
         .card.node {
-            --accent: #FF6B35;
+            --accent: var(--accent-node);
         }
 
         .card.pocket {
-            --accent: #7B68EE;
+            --accent: var(--accent-pocket);
         }
 
         .card-icon {
@@ -171,6 +254,7 @@
             transition: all 0.2s ease;
             border: none;
             cursor: pointer;
+            font-family: inherit;
         }
 
         .card-cta:hover {
@@ -234,6 +318,191 @@
             color: #666;
             font-size: 0.9rem;
         }
+        
+        .footer-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .footer-links a { color: #666; text-decoration: none; border-bottom: 1px solid transparent; transition: all 0.2s; }
+        .footer-links a:hover { color: #fff; border-bottom-color: #fff; }
+
+        .legal-links {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        .legal-links a {
+            color: #888;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .legal-links a:hover {
+            color: #fff;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            overflow-y: auto;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .modal-content {
+            background: #111;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 2.5rem;
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: #888;
+            font-size: 2rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .modal h3 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .form-group input[type="email"],
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 0.75rem;
+            background: #0a0a0a;
+            border: 1px solid #333;
+            border-radius: 6px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .form-group input[type="email"]:focus,
+        .form-group input[type="text"]:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .checkbox-group {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #0a0a0a;
+            border-radius: 6px;
+            border: 1px solid #333;
+        }
+
+        .checkbox-group label {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            color: #ccc;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+            cursor: pointer;
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+        }
+
+        .checkbox-group a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        .checkbox-group a:hover {
+            color: #fff;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent);
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            transform: scale(1.02);
+            filter: brightness(1.1);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .risk-warning {
+            font-size: 0.75rem;
+            color: #666;
+            margin-top: 1rem;
+            padding: 0.75rem;
+            background: #0a0a0a;
+            border-radius: 6px;
+            border-left: 2px solid #ff6b35;
+            line-height: 1.4;
+        }
+
+        footer p:nth-child(2) {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
 
         @media (max-width: 768px) {
             h1 {
@@ -247,12 +516,28 @@
             .ecosystem-grid {
                 grid-template-columns: 1fr;
             }
+
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .state-step::after { display: none; }
+
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .legal-links a {
+                margin: 0 0.5rem;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
+            <nav>CCE ECOSYSTEM v1.0</nav>
             <h1>Cascade Compounding Engine</h1>
             <p class="tagline">Sovereign. Deterministic. Disciplined.</p>
         </header>
@@ -261,6 +546,37 @@
             Most trading systems are opaque, emotional, and hype-driven.<br>
             The CCE is the opposite.<br><br>
             Three products. One philosophy. Zero compromise.
+        </div>
+
+        <div class="philosophy-grid">
+            <div class="philosophy-col bad">
+                <h3>The Industry</h3>
+                <ul>
+                    <li>Opaque Black Boxes</li>
+                    <li>Emotional Reactions</li>
+                    <li>Hype-Driven Promises</li>
+                    <li>Unpredictable Behaviour</li>
+                </ul>
+            </div>
+            <div class="philosophy-col good">
+                <h3>The CCE Way</h3>
+                <ul>
+                    <li>Transparent Logic</li>
+                    <li>Deterministic Rules</li>
+                    <li>Verifiable Results</li>
+                    <li>Disciplined Execution</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title">The Seven-State Machine</h2>
+        <div class="state-machine">
+            <div class="state-step"><div class="state-name">DORMANT</div><div class="state-desc">Safety (USDT)</div></div>
+            <div class="state-step"><div class="state-name">ANCHOR</div><div class="state-desc">Entry (33%)</div></div>
+            <div class="state-step"><div class="state-name">IGNITION</div><div class="state-desc">Trend (67%)</div></div>
+            <div class="state-step"><div class="state-name">CASCADE</div><div class="state-desc">Full (100%)</div></div>
+            <div class="state-step"><div class="state-name">SPILLWAY</div><div class="state-desc">Profit Taking</div></div>
+            <div class="state-step"><div class="state-name">EXTRACTION</div><div class="state-desc">Exit to Safety</div></div>
         </div>
 
         <div class="cards-container">
@@ -280,7 +596,7 @@
                     View-only. No keys. No risk. No execution.
                 </div>
 
-                <a href="#" class="card-cta">Start Observing →</a>
+                <button class="card-cta" onclick="openModal('cloud')">Start Observing →</button>
                 <div class="card-price">£12/month</div>
             </div>
 
@@ -300,7 +616,7 @@
                     No cloud. No custody. No third-party trust.
                 </div>
 
-                <a href="#" class="card-cta">Claim Your Node →</a>
+                <button class="card-cta" onclick="openModal('node')">Claim Your Node →</button>
                 <div class="card-price">£200 one-time</div>
             </div>
 
@@ -320,7 +636,7 @@
                     Companion layer. Not a replacement.
                 </div>
 
-                <a href="#" class="card-cta">Stay Connected →</a>
+                <button class="card-cta" onclick="openModal('pocket')">Stay Connected →</button>
                 <div class="card-price">£5/month</div>
             </div>
         </div>
@@ -343,12 +659,228 @@
             </div>
         </div>
 
+        <h2 class="section-title" id="faq">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-q">Is this a trading bot?</div>
+                <div class="faq-a">No. It is a state machine. Bots react constantly to noise. CCE moves deliberately between seven distinct states based on strict macro conditions.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Do you hold my funds?</div>
+                <div class="faq-a">Never. CCE Node runs on your hardware. CCE Cloud is a simulation. You retain full custody at all times.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can I use Pocket without Node?</div>
+                <div class="faq-a">Pocket requires either a Cloud subscription (to track the engine) or a Node (to track your execution). It is a view-only companion.</div>
+            </div>
+        </div>
+
         <footer>
             <p>Built by <strong>JamesTheGiblet</strong> · Giblets Creations</p>
             <p style="margin-top: 0.5rem; font-size: 0.85rem;">
                 A deterministic approach to cryptocurrency compounding.
             </p>
+            <div class="footer-links">
+                <a href="https://docs.cce.gibletscreations.com">Documentation</a>
+                <a href="https://discord.gg/cce">Discord</a>
+                <a href="mailto:support@gibletscreations.com">Support</a>
+            </div>
+            <div class="legal-links">
+                <a href="legal.html#license">License Agreement</a>
+                <a href="legal.html#privacy">Privacy Policy</a>
+                <a href="legal.html#terms">Terms of Service</a>
+            </div>
         </footer>
     </div>
+
+    <!-- Cloud Modal -->
+    <div id="cloudModal" class="modal" style="--accent: #4A9EFF;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('cloud')">&times;</button>
+            <h3>Start with CCE Cloud</h3>
+            
+            <form id="cloudForm" onsubmit="handleSubmit(event, 'cloud')">
+                <div class="form-group">
+                    <label for="cloud-email">Email Address</label>
+                    <input type="email" id="cloud-email" name="email" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="cloud-license" required>
+                        <span>I have read and agree to the <a href="legal.html#license" target="_blank">Software License Agreement</a></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="cloud-immediate" required>
+                        <span>I agree to immediate access to CCE Cloud and acknowledge that I waive my right to cancel under the 14-day cooling-off period once I have accessed the full service</span>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="cloud-risk" required>
+                        <span>I acknowledge that cryptocurrency trading involves substantial risk, including potential loss of capital. CCE is a tool, not financial advice.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Subscribe to CCE Cloud</button>
+
+                <div class="risk-warning">
+                    <strong>Risk Warning:</strong> You may lose money using CCE. Past performance does not guarantee future results. Only trade with capital you can afford to lose.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Node Modal -->
+    <div id="nodeModal" class="modal" style="--accent: #FF6B35;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('node')">&times;</button>
+            <h3>Order CCE Node</h3>
+            
+            <form id="nodeForm" onsubmit="handleSubmit(event, 'node')">
+                <div class="form-group">
+                    <label for="node-email">Email Address</label>
+                    <input type="email" id="node-email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="node-name">Full Name (for shipping)</label>
+                    <input type="text" id="node-name" name="name" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="node-license" required>
+                        <span>I have read and agree to the <a href="legal.html#license" target="_blank">Software License Agreement</a></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="node-hardware" required>
+                        <span>I understand that I own the Node hardware, but the software is licensed (perpetual, non-transferable). My statutory rights under the Consumer Rights Act 2015 remain intact.</span>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="node-risk" required>
+                        <span>I acknowledge that cryptocurrency trading involves substantial risk. CCE is a tool, not financial advice. I may lose money.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Order CCE Node (£200)</button>
+
+                <div class="risk-warning">
+                    <strong>Risk Warning:</strong> You may lose money using CCE. Past performance does not guarantee future results. 30-day money-back guarantee on hardware. Only trade with capital you can afford to lose.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Pocket Modal -->
+    <div id="pocketModal" class="modal" style="--accent: #7B68EE;">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('pocket')">&times;</button>
+            <h3>Get CCE Pocket</h3>
+            
+            <form id="pocketForm" onsubmit="handleSubmit(event, 'pocket')">
+                <div class="form-group">
+                    <label for="pocket-email">Email Address</label>
+                    <input type="email" id="pocket-email" name="email" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="pocket-license" required>
+                        <span>I have read and agree to the <a href="legal.html#license" target="_blank">Software License Agreement</a></span>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="pocket-requires" required>
+                        <span>I understand that CCE Pocket requires an active CCE Cloud subscription OR CCE Node ownership to function</span>
+                    </label>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" id="pocket-risk" required>
+                        <span>I acknowledge that cryptocurrency trading involves substantial risk. CCE is a tool, not financial advice.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Start Free Trial (14 days)</button>
+
+                <div class="risk-warning">
+                    <strong>14-Day Free Trial:</strong> No credit card required. After trial ends, £5/month. Cancel anytime.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openModal(product) {
+            const modal = document.getElementById(`${product}Modal`);
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(product) {
+            const modal = document.getElementById(`${product}Modal`);
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Handle form submission
+        function handleSubmit(event, product) {
+            event.preventDefault();
+            
+            // In production, this would:
+            // 1. Validate all fields
+            // 2. Send to your backend
+            // 3. Redirect to Stripe checkout
+            // 4. Store license acceptance in database
+            
+            console.log(`${product} signup submitted`);
+            alert(`Thank you! In production, this would redirect to payment for CCE ${product.charAt(0).toUpperCase() + product.slice(1)}.`);
+            
+            // For now, just close the modal
+            closeModal(product);
+        }
+
+        // Prevent form submission if checkboxes aren't checked
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                const checkboxes = this.querySelectorAll('input[type="checkbox"]');
+                const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+                
+                if (!allChecked) {
+                    e.preventDefault();
+                    alert('Please review and accept all terms before continuing.');
+                }
+            });
+        });
+
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js');
+            });
+        }
+    </script>
 </body>
 </html>

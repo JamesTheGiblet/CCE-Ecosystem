@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Documents — CCE Ecosystem</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #333;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            color: #fff;
+        }
+
+        /* Tab Navigation */
+        .legal-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #222;
+            overflow-x: auto;
+            padding-bottom: 1px;
+        }
+
+        .legal-nav button {
+            background: none;
+            border: none;
+            color: #666;
+            font-family: inherit;
+            font-size: 1rem;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .legal-nav button:hover {
+            color: #ccc;
+        }
+
+        .legal-nav button.active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        /* Content Sections */
+        .legal-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .legal-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography for Legal Text */
+        .legal-text h2 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #222;
+        }
+
+        .legal-text h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .legal-text p {
+            margin-bottom: 1rem;
+            color: #ccc;
+        }
+
+        .legal-text ul {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            color: #ccc;
+        }
+
+        .legal-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        .legal-text strong {
+            color: #fff;
+        }
+
+        .version-info {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #111;
+            border-radius: 6px;
+            border: 1px solid #222;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #222;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .legal-nav {
+                flex-direction: column;
+                gap: 0;
+                border-bottom: none;
+            }
+            .legal-nav button {
+                border-bottom: 1px solid #222;
+                text-align: left;
+                padding-left: 0;
+            }
+            .legal-nav button.active {
+                border-bottom-color: #222;
+                border-left: 2px solid #fff;
+                padding-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav><a href="index.html">← Back to Ecosystem</a></nav>
+            <h1>Legal Documents</h1>
+        </header>
+
+        <div class="legal-nav">
+            <button onclick="switchTab('license')" class="active" id="tab-license">License Agreement</button>
+            <button onclick="switchTab('privacy')" id="tab-privacy">Privacy Policy</button>
+            <button onclick="switchTab('terms')" id="tab-terms">Terms of Service</button>
+        </div>
+
+        <!-- LICENSE AGREEMENT -->
+        <div id="license" class="legal-content legal-text active">
+            <div class="version-info">
+                <strong>Version 1.1 (UK Edition)</strong><br>
+                Effective Date: February 9, 2026
+            </div>
+
+            <h2>Overview</h2>
+            <p>This Software License Agreement ("License") is a legal agreement between you ("Licensee", "you", or "your") and Giblets Creations ("Licensor", "we", "us", or "our") for the use of the Cascade Compounding Engine ("CCE") software and associated products.</p>
+            <p>By purchasing, downloading, installing, or using any CCE product (Cloud, Node, or Pocket), you agree to be bound by the terms of this License.</p>
+            <p><strong>If you do not agree to these terms, do not use the software.</strong></p>
+
+            <h2>1. Grant of License</h2>
+            <p>Subject to your compliance with this License, Giblets Creations grants you a <strong>limited, non-exclusive, non-transferable, revocable license</strong> to use the CCE software for personal, non-commercial purposes.</p>
+            
+            <h3>You MAY:</h3>
+            <ul>
+                <li>Use the software for personal cryptocurrency trading</li>
+                <li>Access the software on devices you own or control</li>
+                <li>Monitor and analyse the software's behaviour</li>
+                <li>Share general observations about performance (not proprietary logic)</li>
+            </ul>
+
+            <h3>You MAY NOT:</h3>
+            <ul>
+                <li>Reverse-engineer, decompile, or disassemble the software</li>
+                <li>Extract, copy, or replicate the CCE strategy or algorithms</li>
+                <li>Modify, adapt, or create derivative works</li>
+                <li>Resell, rent, lease, or sublicense the software</li>
+                <li>Use the software for commercial purposes without written permission</li>
+            </ul>
+
+            <h2>2. Intellectual Property</h2>
+            <p>All CCE software, including source code, algorithms, state machine logic, user interfaces, and documentation, are and remain the <strong>exclusive property of Giblets Creations</strong>.</p>
+            <p>© 2026 Giblets Creations. All rights reserved.</p>
+
+            <h2>3. Proprietary Information</h2>
+            <p>The CCE strategy, including state transition logic, entry/exit conditions, and risk management rules, constitutes <strong>confidential and proprietary information</strong>.</p>
+            <p>You agree to maintain the confidentiality of this information and not to disclose strategy details to third parties or attempt to reverse-engineer the methodology.</p>
+
+            <h2>4. Product-Specific Terms</h2>
+            
+            <h3>CCE Cloud</h3>
+            <p>Subscription-based SaaS. Monthly term. Cancel anytime. 30-day money-back guarantee for first subscription only.</p>
+            
+            <h3>CCE Node</h3>
+            <p>Perpetual, device-specific license. You own the hardware; we license the software. License is non-transferable upon resale of hardware. 1-year hardware warranty.</p>
+            
+            <h3>CCE Pocket</h3>
+            <p>Subscription-based mobile app. Requires active Cloud subscription OR Node ownership. 14-day free trial.</p>
+
+            <h2>5. Disclaimers</h2>
+            <p><strong>CCE IS A TOOL, NOT FINANCIAL ADVICE.</strong></p>
+            <p>Giblets Creations is not a financial advisor. Use of CCE is entirely at your own risk.</p>
+            <p><strong>PAST PERFORMANCE ≠ FUTURE RESULTS.</strong> We make zero guarantees about future returns, profitability, or execution reliability.</p>
+            <p><strong>CRYPTOCURRENCY TRADING INVOLVES SUBSTANTIAL RISK.</strong> You may lose money using CCE. Only trade with capital you can afford to lose.</p>
+
+            <h2>6. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law, Giblets Creations shall NOT be liable for financial losses, missed trades, data loss, or third-party service failures.</p>
+            <p>Our total liability shall not exceed the amount you paid for the specific CCE product in the 12 months prior to the claim.</p>
+
+            <h2>7. Termination</h2>
+            <p>We may terminate your license if you violate these terms. Upon termination, you must cease all use of the software.</p>
+
+            <h2>8. Governing Law</h2>
+            <p>This License is governed by the laws of <strong>England and Wales</strong>.</p>
+        </div>
+
+        <!-- PRIVACY POLICY -->
+        <div id="privacy" class="legal-content legal-text">
+            <div class="version-info">
+                <strong>Privacy Policy v1.0</strong><br>
+                Effective Date: February 9, 2026
+            </div>
+
+            <h2>1. Introduction</h2>
+            <p>At Giblets Creations, we believe in sovereignty and privacy. We collect only the data necessary to provide the CCE services (Cloud, Node, Pocket) and improve our ecosystem.</p>
+            <p>We comply with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.</p>
+
+            <h2>2. Data We Collect</h2>
+            <h3>Information You Provide</h3>
+            <ul>
+                <li><strong>Account Information:</strong> Email address, name (for billing/shipping).</li>
+                <li><strong>Payment Information:</strong> Processed securely by Stripe/PayPal (we do not store full card details).</li>
+                <li><strong>Preferences:</strong> Notification settings, dashboard configurations.</li>
+            </ul>
+
+            <h3>Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Usage Analytics:</strong> Anonymised data on how you use Cloud and Pocket.</li>
+                <li><strong>Device Information:</strong> Device tokens for push notifications (Pocket).</li>
+                <li><strong>Performance Metrics:</strong> Simulated portfolio data (Cloud) and execution logs (Node, stored locally).</li>
+            </ul>
+
+            <h2>3. Data We DO NOT Collect</h2>
+            <ul>
+                <li><strong>Exchange API Keys:</strong> CCE Node stores these locally on your device, encrypted. CCE Cloud does not require them. We never see your keys.</li>
+                <li><strong>Real Trading History:</strong> Your Node execution history stays on your Node.</li>
+                <li><strong>Personal Financial Information:</strong> We do not track your net worth or total holdings outside of CCE.</li>
+                <li><strong>Location Data:</strong> We do not track your physical location.</li>
+            </ul>
+
+            <h2>4. How We Use Your Data</h2>
+            <ul>
+                <li>To provide and maintain the CCE services.</li>
+                <li>To process payments and orders.</li>
+                <li>To send important notifications (state changes, subscription updates).</li>
+                <li>To provide customer support.</li>
+                <li>To detect and prevent fraud or abuse.</li>
+            </ul>
+
+            <h2>5. Data Sharing</h2>
+            <p>We do <strong>not</strong> sell your personal data.</p>
+            <p>We share data only with trusted third-party service providers necessary for operation:</p>
+            <ul>
+                <li><strong>Payment Processors:</strong> Stripe, PayPal.</li>
+                <li><strong>Infrastructure:</strong> Cloudflare, Railway, Vercel (hosting).</li>
+                <li><strong>Notifications:</strong> Apple (APNs), Google (FCM).</li>
+            </ul>
+
+            <h2>6. Data Retention</h2>
+            <ul>
+                <li><strong>Account Data:</strong> Retained until you delete your account.</li>
+                <li><strong>Logs:</strong> Server logs retained for 90 days.</li>
+                <li><strong>Analytics:</strong> Anonymised data retained for 12 months.</li>
+            </ul>
+
+            <h2>7. Your Rights</h2>
+            <p>Under UK GDPR, you have the right to:</p>
+            <ul>
+                <li>Access the personal data we hold about you.</li>
+                <li>Correct inaccurate data.</li>
+                <li>Request deletion of your data ("Right to be Forgotten").</li>
+                <li>Object to processing of your data.</li>
+                <li>Export your data in a portable format.</li>
+            </ul>
+            <p>To exercise these rights, email <a href="mailto:privacy@gibletscreations.com" style="color: #fff;">privacy@gibletscreations.com</a>.</p>
+        </div>
+
+        <!-- TERMS OF SERVICE -->
+        <div id="terms" class="legal-content legal-text">
+            <div class="version-info">
+                <strong>Terms of Service v1.0</strong><br>
+                Effective Date: February 9, 2026
+            </div>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing the CCE Ecosystem websites (including cloud., node., and pocket. subdomains) or using our services, you agree to these Terms of Service. These terms apply in addition to the Software License Agreement.</p>
+
+            <h2>2. Description of Service</h2>
+            <p>Giblets Creations provides a suite of tools for cryptocurrency trading analysis and execution:</p>
+            <ul>
+                <li><strong>CCE Cloud:</strong> A web-based simulation and observation platform.</li>
+                <li><strong>CCE Node:</strong> Hardware and software for local execution.</li>
+                <li><strong>CCE Pocket:</strong> Mobile application for monitoring.</li>
+            </ul>
+
+            <h2>3. User Accounts</h2>
+            <p>You are responsible for maintaining the confidentiality of your account credentials. You are fully responsible for all activities that occur under your account.</p>
+            <p>You agree to notify us immediately of any unauthorised use of your account.</p>
+
+            <h2>4. Acceptable Use</h2>
+            <p>You agree not to:</p>
+            <ul>
+                <li>Use the services for any illegal purpose.</li>
+                <li>Attempt to gain unauthorised access to our systems.</li>
+                <li>Interfere with or disrupt the integrity or performance of the services.</li>
+                <li>Use the services to transmit malware or harmful code.</li>
+                <li>Harass or abuse our support staff.</li>
+            </ul>
+
+            <h2>5. Risk Disclosure</h2>
+            <p>You acknowledge that cryptocurrency trading involves significant risk. The CCE Ecosystem provides tools to assist with decision-making and execution, but <strong>you are solely responsible for your trading decisions and financial outcomes</strong>.</p>
+            <p>We do not guarantee uptime, accuracy of data, or specific financial results.</p>
+
+            <h2>6. Third-Party Services</h2>
+            <p>Our services may link to or integrate with third-party exchanges (e.g., Binance). We are not responsible for the availability, security, or terms of these third-party services.</p>
+
+            <h2>7. Modifications to Service</h2>
+            <p>We reserve the right to modify or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice. We shall not be liable to you or to any third party for any modification, suspension, or discontinuance of the Service.</p>
+
+            <h2>8. Governing Law</h2>
+            <p>These Terms shall be governed by the laws of England and Wales.</p>
+
+            <h2>9. Contact</h2>
+            <p>For any questions regarding these Terms, please contact <a href="mailto:legal@gibletscreations.com" style="color: #fff;">legal@gibletscreations.com</a>.</p>
+        </div>
+
+        <footer>
+            <p>© 2026 Giblets Creations. All rights reserved.</p>
+            <p>Sovereign. Deterministic. Disciplined.</p>
+        </footer>
+    </div>
+
+    <script>
+        function switchTab(tabId) {
+            // Hide all content
+            document.querySelectorAll('.legal-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Deactivate all buttons
+            document.querySelectorAll('.legal-nav button').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Activate selected
+            document.getElementById(tabId).classList.add('active');
+            document.getElementById('tab-' + tabId).classList.add('active');
+            
+            // Update URL hash without scrolling
+            history.pushState(null, null, '#' + tabId);
+        }
+
+        // Handle initial load with hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.substring(1);
+            if (hash && ['license', 'privacy', 'terms'].includes(hash)) {
+                switchTab(hash);
+            }
+        });
+    </script>
+</body>
+</html>

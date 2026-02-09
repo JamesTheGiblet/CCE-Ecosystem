@@ -35,12 +35,14 @@ Each product has specific terms outlined below, in addition to the general terms
 Subject to your compliance with this License, Giblets Creations grants you a **limited, non-exclusive, non-transferable, revocable license** to use the CCE software for personal, non-commercial purposes.
 
 **You MAY:**
+
 - Use the software for personal cryptocurrency trading
 - Access the software on devices you own or control
 - Monitor and analyse the software's behaviour
 - Share general observations about performance (not proprietary logic)
 
 **You MAY NOT:**
+
 - Reverse-engineer, decompile, or disassemble the software
 - Extract, copy, or replicate the CCE strategy or algorithms
 - Modify, adapt, or create derivative works
@@ -53,6 +55,7 @@ Subject to your compliance with this License, Giblets Creations grants you a **l
 
 **Ownership:**  
 All CCE software, including but not limited to:
+
 - Source code and object code
 - Algorithms and state machine logic
 - User interfaces and dashboard designs
@@ -70,6 +73,7 @@ All CCE software, including but not limited to:
 ### 3. Proprietary Information
 
 The CCE strategy, including:
+
 - State transition logic
 - Entry and exit conditions
 - Risk management rules
@@ -79,6 +83,7 @@ The CCE strategy, including:
 ...constitutes **confidential and proprietary information** protected as trade secrets under applicable law.
 
 **You agree to:**
+
 - Maintain the confidentiality of proprietary information
 - Not disclose strategy details to third parties
 - Not attempt to extract or reverse-engineer the methodology
@@ -91,6 +96,7 @@ CCE software may automatically download and install updates to improve functiona
 
 **Right to Modify:**  
 Giblets Creations reserves the right to:
+
 - Modify, update, or discontinue any feature
 - Change subscription pricing (with 30 days notice)
 - Alter the CCE strategy or algorithms
@@ -102,6 +108,7 @@ We are not obligated to provide updates, support, or maintenance beyond what is 
 ### 5. Data Collection and Privacy
 
 **Data We Collect:**
+
 - Account information (email, name)
 - Usage analytics (anonymised)
 - Performance metrics (simulated for Cloud, real for Node)
@@ -109,6 +116,7 @@ We are not obligated to provide updates, support, or maintenance beyond what is 
 - Error logs and diagnostic data
 
 **Data We DON'T Collect:**
+
 - Exchange API keys (Node stores locally, encrypted)
 - Trading history beyond CCE execution
 - Personal financial information
@@ -116,6 +124,7 @@ We are not obligated to provide updates, support, or maintenance beyond what is 
 - Browsing history
 
 **Data Usage:**
+
 - Improve software performance
 - Provide customer support
 - Analyse usage patterns
@@ -123,6 +132,7 @@ We are not obligated to provide updates, support, or maintenance beyond what is 
 
 **Data Sharing:**  
 We do not sell or share your data with third parties, except:
+
 - As required by law
 - To process payments (Stripe, PayPal)
 - To deliver notifications (Apple, Google)
@@ -133,6 +143,7 @@ Available at `privacy.cce.gibletscreations.com`
 ### 6. Third-Party Services
 
 CCE integrates with third-party services:
+
 - **Binance** (cryptocurrency exchange)
 - **CoinGecko** (market data)
 - **Alternative.me** (Fear & Greed Index)
@@ -141,6 +152,7 @@ CCE integrates with third-party services:
 
 **Your Responsibility:**  
 You are responsible for:
+
 - Complying with third-party terms of service
 - Securing your exchange API keys
 - Understanding exchange fees and risks
@@ -148,6 +160,7 @@ You are responsible for:
 
 **No Liability for Third Parties:**  
 Giblets Creations is not responsible for:
+
 - Third-party service outages
 - Exchange API changes or failures
 - Data breaches at third-party services
@@ -277,6 +290,7 @@ In-app purchases processed by Apple/Google.
 **CCE IS A TOOL, NOT FINANCIAL ADVICE.**
 
 Giblets Creations:
+
 - Is not a financial advisor
 - Is not a registered investment advisor
 - Does not provide personalised financial advice
@@ -289,12 +303,14 @@ Giblets Creations:
 **PAST PERFORMANCE ≠ FUTURE RESULTS.**
 
 We make **zero guarantees** about:
+
 - Future returns or profitability
 - Win rates or success metrics
 - Comparison to benchmark performance
 - Uptime or execution reliability
 
 Historical backtests and simulated performance:
+
 - Are not indicative of future results
 - May not reflect real-world execution
 - Do not account for slippage, fees, or market changes
@@ -305,6 +321,7 @@ Historical backtests and simulated performance:
 **CRYPTOCURRENCY TRADING INVOLVES SUBSTANTIAL RISK.**
 
 Risks include but are not limited to:
+
 - Loss of capital (partial or total)
 - Market volatility and rapid price changes
 - Exchange failures or hacks
@@ -322,6 +339,7 @@ Risks include but are not limited to:
 **THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.**
 
 Giblets Creations disclaims all warranties, express or implied, including:
+
 - Merchantability
 - Fitness for a particular purpose
 - Non-infringement
@@ -336,6 +354,7 @@ Giblets Creations disclaims all warranties, express or implied, including:
 **TO THE MAXIMUM EXTENT PERMITTED BY LAW:**
 
 Giblets Creations shall NOT be liable for:
+
 - Any financial losses resulting from use of CCE
 - Missed trades or execution failures
 - Data loss or corruption
@@ -351,6 +370,7 @@ Our total liability to you shall not exceed the amount you paid for the specific
 ### 12. Indemnification
 
 **You agree to indemnify and hold harmless Giblets Creations**, its officers, employees, and affiliates from any claims, damages, or expenses (including legal fees) arising from:
+
 - Your use of CCE software
 - Your violation of this License
 - Your violation of applicable laws or regulations
@@ -364,6 +384,7 @@ Our total liability to you shall not exceed the amount you paid for the specific
 ### 13. Compliance
 
 **Your Responsibilities:**
+
 - Comply with all applicable laws in your jurisdiction
 - Pay all taxes related to cryptocurrency trading
 - Understand and comply with exchange regulations
@@ -398,6 +419,7 @@ If any provision of this License is found to be unenforceable, the remaining pro
 ### 17. Entire Agreement
 
 This License, together with:
+
 - Privacy Policy
 - Terms of Service
 - Product-specific agreements
@@ -424,12 +446,14 @@ Perpetual license cannot be terminated (unless you violate terms).
 ### 20. Termination by Us
 
 We may terminate your license if you:
+
 - Violate this License
 - Engage in prohibited activities
 - Fail to pay subscription fees
 - Use software fraudulently or illegally
 
 **Upon termination:**
+
 - Your access is immediately revoked
 - No refunds for remaining subscription period
 - You must cease all use of the software
@@ -479,6 +503,7 @@ We may update this License at any time.
 
 **Notice:**  
 Material changes will be communicated via:
+
 - Email (to registered account)
 - In-app notification
 - Website announcement
@@ -498,6 +523,7 @@ Continued use of CCE software after changes take effect constitutes acceptance o
 Some CCE features may be marked as "Beta", "Preview", or "Experimental".
 
 **Beta Terms:**
+
 - Provided "as is" with no warranties
 - May contain bugs or errors
 - May be discontinued without notice
@@ -507,6 +533,7 @@ Some CCE features may be marked as "Beta", "Preview", or "Experimental".
 ### 26. API Access (Future)
 
 If CCE offers API access in the future:
+
 - Separate API License required
 - Rate limits and usage quotas apply
 - API may be discontinued or changed
